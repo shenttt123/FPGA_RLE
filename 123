@@ -1,4 +1,4 @@
-Run-Length Encoding Hardware for ECE354
+//Run-Length Encoding Hardware for ECE354
 
 module rle_enc (clk, rst, rd_req , recv_ready ,send_ready, in_data , out_data,
 end_of_stream ,wr_req);
@@ -154,6 +154,8 @@ testbench:
 // The `timescale directive specifies that
 // the simulation time unit is 1000 ps and
 // the simulator timestep is 100 ps
+
+
 module rle_testbench;
 // signal declaration
 reg clkt, rstt;
@@ -164,40 +166,53 @@ wire [23:0] out_datat;
 wire rd_reqt, wr_reqt;
 // instantiate the circuit under test
 rle_enc uut
-(.clk(clkt), .rst(rstt), .recv_ready(recv_readyt), .send_ready(send_readyt), .in_data(in_dat
+    (.clk(clkt), .rst(rstt), .recv_ready(recv_readyt), .send_ready(send_readyt), .in_data(in_dat
 at), .end_of_stream(end_of_streamt), .out_data(out_datat), .rd_req(rd_reqt), .wr_req(wr_reqt));
-// clock running forever
-always
-begin
-// Clock signal assignment
-clkt = 0;
-forever #1 clkt = !clkt;
-end
-// reset for a few cycles
-initial
-begin
-// Reset signal assignment
-rstt = 1;
-#3 rstt= 0;
-end
+    // clock running forever
+    always
+    begin
+    // Clock signal assignment
+    clkt = 0;
+  forever #1 clkt = !clkt;
+  end
+
+
+  // reset for a few cycles
+  initial
+  begin
+  // Reset signal assignment
+  rstt = 1;
+  #3 rstt= 0;
+  end
+
+
+
 // test vector generator
 initial
 begin
-// test vector 1
-send_readyt = 1;
-recv_readyt = 1;
+  // test vector 1
+  send_readyt = 1;
+  recv_readyt = 1;
+  
 in_datat=8'b00001111;
+
+
 #5 recv_readyt = 0;
 #50 in_datat=8'b11001111;
 recv_readyt = 1;
 #5 recv_readyt = 0;
 #60 in_datat=8'b11111100;
 recv_readyt = 1;
-#5 recv_readyt = 0;
-#60 in_datat=8'b00000011;
-recv_readyt = 1;
-#5 recv_readyt = 0;
-$monitor($stime,,clkt,,rstt,,recv_readyt,,send_readyt,,in_datat,,end_of_streamt,,out_datat,
+
+    #5 recv_readyt = 0;
+    #60 in_datat=8'b00000011;
+      recv_readyt = 1;
+    #5 recv_readyt = 0;
+
+
+
+    $monitor($stime,,clkt,,rstt,,recv_readyt,,send_readyt,,in_datat,,end_of_streamt,,out_datat,
 ,rd_reqt,,wr_reqt);
+
 end
 endmodule
