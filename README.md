@@ -5,4 +5,4 @@ First, I created new resource library in Modelsim for the design, put it in ther
 
 Here's the demo video
 https://drive.google.com/file/d/1DqJiUkcRRCtwGYN9qnpqVGXkf8EGcgDq/view?usp=sharing
-[![asciicast](https://asciinema.org/a/113463.png)](https://drive.google.com/file/d/1DqJiUkcRRCtwGYN9qnpqVGXkf8EGcgDq/view?usp=sharing)
+[![asciicast]](https://drive.google.com/file/d/1DqJiUkcRRCtwGYN9qnpqVGXkf8EGcgDq/view?usp=sharing)
