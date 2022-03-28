@@ -6,3 +6,4 @@ First, I created new resource library in Modelsim for the design, put it in ther
 Here's the demo video
 
 [![Watch the video](https://i.imgur.com/NHHrI1b.jpg)](https://drive.google.com/file/d/1DqJiUkcRRCtwGYN9qnpqVGXkf8EGcgDq/view)
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
