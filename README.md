@@ -5,4 +5,4 @@ First, I created new resource library in Modelsim for the design, put it in ther
 
 Here's the demo video
 
-[demo](https://drive.google.com/file/d/1DqJiUkcRRCtwGYN9qnpqVGXkf8EGcgDq/view?usp=sharing)
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
